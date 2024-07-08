@@ -8,7 +8,7 @@ local player
 
 function love.load()
 	if love.filesystem.isFused() then
-		log.level = log.Level.WARN
+		log.level = log.Level.INFO
 	else
 		log.level = log.Level.DEBUG
 	end
