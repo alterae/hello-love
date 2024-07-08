@@ -7,6 +7,12 @@ local screen = require "lib.screen"
 local player
 
 function love.load()
+	if love.filesystem.isFused() then
+		log.level = log.Level.WARN
+	else
+		log.level = log.Level.DEBUG
+	end
+
 	screen:init()
 
 	local font = graphics.newFont("res/fonts/cozette.otf", 13)
